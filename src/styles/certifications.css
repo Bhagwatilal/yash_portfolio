@@ -1,0 +1,9 @@
+.cr{display:grid;grid-template-columns:.8fr 1.2fr;gap:5vw}
+.cr h2{margin:14px 0 20px}
+.cl{list-style:none;padding:0;border-top:1px solid var(--line)}
+.cl a{display:grid;grid-template-columns:50px 1fr auto;gap:12px;align-items:center;padding:24px 14px;border-bottom:1px solid var(--line);position:relative;overflow:hidden;font-size:clamp(20px,2.4vw,30px);font-weight:500;letter-spacing:-.03em;line-height:1.15;transition:color .4s}
+.cl a::before{content:"";position:absolute;inset:0;background:var(--ink);transform:scaleX(0);transform-origin:0 50%;transition:transform .5s cubic-bezier(.7,0,.2,1);z-index:0}
+.cl a>*{position:relative;z-index:1}
+.cl a:hover{color:var(--inv)}.cl a:hover::before{transform:none}.cl a:hover .mono{color:var(--inv)}
+@media(max-width:800px){.cr{grid-template-columns:1fr}}
+@media(max-width:600px){.cl a{grid-template-columns:36px 1fr;gap:6px 10px;padding:20px 8px;font-size:clamp(18px,5vw,24px)}.cl a .mono:last-child{grid-column:2}}

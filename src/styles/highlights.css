@@ -1,0 +1,21 @@
+.hon{height:320vh;padding:0}
+.stk{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:84px 0 32px 5vw}
+.stk h2{margin:10px 0 18px;font-size:clamp(34px,min(6vw,9vh),76px)}
+.trk{display:flex;gap:28px;will-change:transform;padding-right:4vw}
+.hc{flex:0 0 min(480px,80vw);overflow:hidden;min-height:clamp(280px,44vh,340px);background:var(--card);border-radius:26px;padding:24px 26px 28px;box-shadow:var(--sh);position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:20px;transform:scale(.88);opacity:.6;transition:transform .6s cubic-bezier(.2,.8,.2,1),opacity .6s}
+.hc.on{transform:scale(1);opacity:1}
+.hc-top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;position:relative;z-index:1}
+.hc-body{position:relative;z-index:1}
+.hc .mono{white-space:nowrap}
+.hc .ic{width:64px;height:64px;flex:0 0 auto;border-radius:18px;background:var(--card);border:1px solid var(--line);box-shadow:0 8px 20px -10px rgba(0,0,0,.3);display:grid;place-items:center}
+.hc .ic svg{width:34px;height:34px}
+.hc::before{content:"";position:absolute;left:-40px;top:-40px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,var(--g,#888),transparent 68%);opacity:.16;pointer-events:none}
+.hc .hx{font:400 11px/1.5 "JetBrains Mono",monospace;color:var(--mut);margin-top:8px;max-width:none}
+.hc h3{font-size:22px;letter-spacing:-.03em}
+.hc p{color:var(--mut);font-size:14px;max-width:26ch;line-height:1.4;margin-top:6px}
+.hc .n{font-weight:800;font-size:clamp(48px,7vh,68px);letter-spacing:-.06em;line-height:1;margin-bottom:12px;font-variant-numeric:tabular-nums}
+.ul{position:relative;overflow:hidden;height:2px;width:min(570px,60vw);background:var(--line);margin:0 0 22px}
+.ul i{position:absolute;inset:0;background:var(--ink);transform-origin:0 50%;transform:scaleX(var(--p,0))}
+.more{flex:0 0 auto;align-self:center;display:flex;align-items:center;gap:18px;padding:0 6vw 0 10px;white-space:nowrap;font-family:"Instrument Serif",serif;font-style:italic;font-size:clamp(36px,5vw,72px);color:var(--mut)}
+.more b{font-family:Inter,sans-serif;font-style:normal;font-weight:400;color:var(--ink)}
+@media(max-width:640px){.stk{padding:78px 0 24px 5vw}.hc{padding:20px 20px 24px;min-height:clamp(240px,40svh,300px);border-radius:22px}.hc .ic{width:52px;height:52px;border-radius:14px}.hc .ic svg{width:28px;height:28px}.hc .n{font-size:clamp(40px,11vw,56px)}.hc h3{font-size:20px}}
