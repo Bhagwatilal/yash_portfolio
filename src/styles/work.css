@@ -5,14 +5,15 @@
 .wc .vt span{writing-mode:vertical-rl;rotate:180deg;font-weight:800;font-size:22px;letter-spacing:-.03em;white-space:nowrap}
 .wc .vt u{width:36px;height:36px;border-radius:50%;background:var(--ink);color:var(--inv);display:grid;place-items:center;text-decoration:none}
 .wc.on .vt{opacity:0;pointer-events:none}
-.wc .bd{position:absolute;inset:0;padding:40px;width:min(100%,880px);opacity:0;transform:translateX(30px);transition:opacity .4s,transform .6s}
+.wc .bd{position:absolute;inset:0;padding:40px 42% 40px 40px;width:100%;display:flex;flex-direction:column;justify-content:center;opacity:0;transform:translateX(30px);transition:opacity .4s,transform .6s}
 .wc.on .bd{opacity:1;transform:none;transition-delay:.35s}
 .bd h3{font-size:clamp(26px,3.2vw,44px);letter-spacing:-.04em;line-height:1.05;margin:10px 0 14px;max-width:16ch}
 .bd p{max-width:52ch;color:var(--mut)}
 .tg{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
 .tg span{padding:6px 14px;border-radius:99px;border:1px solid var(--line);font-size:13px}
-.ui{position:absolute;right:-40px;top:70px;width:46%;height:70%;border-radius:20px;background:var(--bg);box-shadow:var(--sh);padding:22px}
+.ui{position:absolute;right:-24px;top:50%;transform:translateY(-50%);width:38%;height:66%;border-radius:20px;background:var(--bg);box-shadow:var(--sh);padding:22px}
 .ui i{display:block;height:44px;border-radius:12px;background:var(--line);margin-bottom:14px;animation:pl 2.4s ease-in-out infinite alternate}
 .ui i:nth-child(2){animation-delay:.3s}.ui i:nth-child(3){animation-delay:.6s}
 @keyframes pl{to{opacity:.35;transform:translateX(8px)}}
+@media(max-width:1050px){.wc .bd{padding-right:40px}.ui{display:none}}
 @media(max-width:760px){.wk{flex-direction:column;height:auto}.wc{flex:none;height:auto}.wc .vt{position:relative;flex-direction:row;gap:12px;padding:18px 20px}.wc .vt span:not(.mono){writing-mode:horizontal-tb;rotate:none;white-space:normal;font-size:clamp(16px,4.4vw,20px);line-height:1.25;flex:1;text-align:left}.wc .vt .mono,.wc .vt u{flex:0 0 auto}.wc.on .vt{display:none}.ui{display:none}.wc .bd{position:relative;width:100%;padding:24px;display:none}.wc.on .bd{display:block;opacity:1;transform:none}}
