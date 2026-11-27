@@ -2,8 +2,8 @@
 .hero-stage{position:static}
 .wm{position:absolute;left:50%;top:15vh;translate:-50% 0;font-weight:800;font-size:clamp(150px,24vw,470px);letter-spacing:-.05em;line-height:.8;color:color-mix(in srgb,var(--ink) 7%,transparent);user-select:none;pointer-events:none;white-space:nowrap}
 .av{position:absolute;left:50%;bottom:-1.2vh;translate:-52.5% 0;height:88vh;aspect-ratio:3/4;z-index:0;mix-blend-mode:multiply}
-.av video,.stand{position:absolute;inset:0;width:100%;height:100%}
-.av video{object-fit:contain;object-position:bottom}
+.av video,.av-poster,.stand{position:absolute;inset:0;width:100%;height:100%}
+.av video,.av-poster{object-fit:contain;object-position:bottom}
 .stand{display:flex;flex-direction:column;align-items:center;justify-content:flex-end}
 .stand small{position:absolute;top:6%;text-align:center}
 .stand i{width:24%;aspect-ratio:1;border-radius:50%;background:linear-gradient(160deg,#c9c6d8,#8f8aa8);margin-bottom:-3%;position:relative;z-index:1}

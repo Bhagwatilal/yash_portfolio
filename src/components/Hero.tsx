@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Heading from "./Heading";
 import heroVideo from "../assets/hero.mp4";
+import heroPoster from "../assets/hero-poster.png";
 import "../styles/hero.css";
 
 const Play = () => <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>;
@@ -38,13 +39,28 @@ export default function Hero() {
         <div className="wm" aria-hidden="true">YASH</div>
         <div className="av">
           {!ready && (
-            <div className={"stand" + (on ? " talk" : "")}>
-              <small className="mono">Avatar video goes here</small><i /><b />
-            </div>
+            <img
+              src={heroPoster}
+              alt="Yash Ahir 3D Avatar"
+              className="av-poster"
+              loading="eager"
+              decoding="sync"
+            />
           )}
           {/* replace src/assets/hero.mp4 to change the avatar video */}
-          <video ref={v} src={heroVideo} autoPlay muted loop={!on} playsInline preload="auto"
-            onLoadedData={() => setReady(true)} onEnded={ended} />
+          <video
+            ref={v}
+            src={heroVideo}
+            poster={heroPoster}
+            autoPlay
+            muted
+            loop={!on}
+            playsInline
+            preload="auto"
+            style={{ opacity: ready ? 1 : 0 }}
+            onLoadedData={() => setReady(true)}
+            onEnded={ended}
+          />
         </div>
         <button className="pp" aria-label={on ? "Pause voice" : "Play voice"} onClick={toggle}>{on ? <Pause /> : <Play />}</button>
       </div>
